@@ -16,21 +16,28 @@
 2. Select your repository: `HarshilPatel-15/Food_Rating_Prediction`
 3. Select branch: `main`
 4. Main file path: `app/app.py`
-5. Python version: `3.9` (or latest available)
+5. Python version: `3.10` (forced by runtime.txt for compatibility)
 6. Click "Deploy"
 
 ### Step 3: Configuration
-The app includes a `.streamlit/config.toml` file with:
-- Custom theme colors
-- Upload size limits
-- Viewer toolbar mode
+The app includes:
+- `.streamlit/config.toml` - Custom theme colors, upload limits, viewer toolbar mode
+- `runtime.txt` - Forces Python 3.10 for better compatibility
+- Updated `requirements.txt` - Modern package versions compatible with Python 3.14+
+
+### Python Compatibility Fix
+- **Fixed**: Updated from outdated packages (pandas==1.5.3, numpy==1.24.3) to modern versions
+- **Fixed**: Removed distutils dependency issues
+- **Fixed**: Added runtime.txt to force stable Python 3.10
+- **Result**: Compatible with Streamlit Cloud's Python environment
 
 ## What's Deployed
 
 ### Core Files
 - `app/app.py` - Main Streamlit application
 - `model/enhanced_rating_model.pkl` - Trained ML model
-- `requirements.txt` - Python dependencies
+- `requirements.txt` - Updated Python dependencies (modern versions)
+- `runtime.txt` - Python version specification
 - `.streamlit/config.toml` - Streamlit configuration
 
 ### Features Available
